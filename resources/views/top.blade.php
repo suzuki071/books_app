@@ -18,6 +18,8 @@
   </div>
   <form action="/top" method="post">
   @csrf
+    <div>メッセージ
+    </div>
     <div><input type="text" name="msg"></div>
     <div><input type="submit" value="送信"></div>
   </form>
