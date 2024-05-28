@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class TopController extends Controller
 {
@@ -18,6 +19,16 @@ class TopController extends Controller
 
     public function post(Request $request)
     {
+        $param = [
+            'name' => 'suzuki',
+            'explain' => (string)$request->msg,
+        ];
+
+        DB::insert('insert into book (name, explain)
+        values (?, ?)',
+        ['suzuki', 'test']
+        );
+
         $data = [
             'name' => 'suzuki',
             'day'  => date('Y/m/d H:i:s'),
