@@ -24,10 +24,10 @@ class TopController extends Controller
             'explain' => (string)$request->msg,
         ];
 
-        DB::insert('insert into book (name, explain)
-        values (?, ?)',
-        ['suzuki', 'test']
-        );
+        DB::table('book')->insert([
+            'name' => 'suzuki',
+            'explain' => 'test'
+        ]);
 
         $data = [
             'name' => 'suzuki',
