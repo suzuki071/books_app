@@ -19,14 +19,9 @@ class TopController extends Controller
 
     public function post(Request $request)
     {
-        $param = [
-            'name' => 'suzuki',
-            'explain' => (string)$request->msg,
-        ];
-
         DB::table('book')->insert([
             'name' => 'suzuki',
-            'explain' => 'test'
+            'explain' => (string)$request->msg
         ]);
 
         $data = [
