@@ -21,7 +21,7 @@ class TopController extends Controller
     {
         DB::table('book')->insert([
             'name' => 'suzuki',
-            'explain' => (string)$request->msg
+            'explain' => (string)$request->msg,
         ]);
 
         $data = [
