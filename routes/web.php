@@ -15,5 +15,5 @@ Route::get('/', function () {
 Route::get('/top', [TopController::class, 'top']);
 Route::post('/top', [TopController::class, 'post']);
 
-Route::get('/register', [RegisterController::class, 'create']);
-Route::post('/register', [RegisterController::class, 'store']);
+Route::get('/regist', [RegisterController::class, 'regist']);
+Route::post('/login', [RegisterController::class, 'login']);
